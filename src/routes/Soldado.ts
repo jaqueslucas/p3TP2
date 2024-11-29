@@ -1,11 +1,11 @@
 import { Router } from "express";
-import SoldadoController from "../controllers/SoldadoController";
+import controller from "../controllers/SoldadoController";
 
 const routes = Router();
 
-routes.post("/", SoldadoController.create);
-routes.get("/", SoldadoController.list);
-routes.delete("/", SoldadoController.delete);
-routes.put("/", SoldadoController.update);
+routes.post("/", controller.create);
+routes.get("/", controller.list);
+routes.delete("/", controller.delete);
+routes.put("/", controller.update);
 
 export default routes;

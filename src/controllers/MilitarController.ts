@@ -4,9 +4,9 @@ import { Militar } from "../models";
 class MilitarController {
     // create
     public async create(req: Request, res: Response): Promise<any> {
-        const { nome, idade, email, fone } = req.body;
+        const { nome, idade, email, fone, patente } = req.body;
         try {
-            const document = new Militar({ nome, idade, email, fone });
+            const document = new Militar({ nome, idade, email, fone, patente });
             const resp = await document.save();
             return res.json(resp);
         } catch (error: any) {
@@ -20,6 +20,8 @@ class MilitarController {
                 return res.json({ message: error.errors["email"].message });
             } else if (error && error.errors["fone"]) {
                 return res.json({ message: error.errors["fone"].message });
+            }else if (error && error.errors["patente"]) {
+                return res.json({ message: error.errors["patente"].message });
             }
             return res.json({ message: error.message });
         }

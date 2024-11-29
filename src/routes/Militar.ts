@@ -1,11 +1,11 @@
 import { Router } from "express";
-import MilitarController from "../controllers/MilitarController";
+import controller from "../controllers/MilitarController";
 
 const routes = Router();
 
-routes.post("/", MilitarController.create);
-routes.get("/", MilitarController.list);
-routes.delete("/", MilitarController.delete);
-routes.put("/", MilitarController.update);
+routes.post("/", controller.create);
+routes.get("/", controller.list);
+routes.delete("/", controller.delete);
+routes.put("/", controller.update);
 
 export default routes;

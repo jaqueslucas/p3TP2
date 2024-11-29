@@ -1,11 +1,11 @@
-import { Router } from "express";
-import PatenteController from "../controllers/PatenteController";
+    import { Router } from "express";
+    import controller from "../controllers/PatenteController";
 
-const routes = Router();
+    const routes = Router();
 
-routes.post("/", PatenteController.create);
-routes.get("/", PatenteController.list);
-routes.delete("/", PatenteController.delete);
-routes.put("/", PatenteController.update);
+    routes.post("/", controller.create);
+    routes.get("/", controller.list);
+    routes.delete("/", controller.delete);
+    routes.put("/", controller.update);
 
-export default routes;
+    export default routes;

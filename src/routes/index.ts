@@ -9,4 +9,6 @@ routes.use("/militar", militarRoutes);
 routes.use("/soldado", soldadoRoutes);
 routes.use("/patente", patenteRoutes);
 
+
+
 export default routes;

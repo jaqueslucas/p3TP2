@@ -28,7 +28,7 @@ militares.push(militar);
 let x = 0;
 militares.forEach((militar) => {
     (async () => {
-        militar.id = await fetch("http://localhost:3000/militar", {
+        militar.id = await fetch("http://localhost:3001/militar", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
